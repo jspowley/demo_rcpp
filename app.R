@@ -11,7 +11,7 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
   sourceCpp('sum.cpp')
-  output$c <- renderText({rcpp_sum(c(input$a, input$b))})
+  output$c <- renderText({rcpp_sum(c(input$a, input$b, 20))})
 }
 
 # Run the application 
